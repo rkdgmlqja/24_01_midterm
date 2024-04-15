@@ -23,6 +23,5 @@ The Custom MLP requires more time to converge, but ultimately achieves better ac
 ## Data Normalization 
 
 After using Data Normalization technique the Accuracy of LeNet-5 was boosted to 98.28%
+![new](https://github.com/rkdgmlqja/24_01_midterm/assets/33273567/03b0112b-abb1-4356-afd9-0d97d34fb6c2)
 
-LeNet Train Loss: 0.0757, LeNet Train Accuracy: 97.68%
-LeNet Test Loss: 0.0529, LeNet Test Accuracy: 98.28%

@@ -15,4 +15,6 @@ LeNet Test Loss: 0.0679, LeNet Test Accuracy: 97.82%
 CustomMLP Train Loss: 0.0657, Train Accuracy: 97.94%
 CustomMLP Test Loss: 0.0657, Test Accuracy: 97.92%
 
+![Figure_1](https://github.com/rkdgmlqja/24_01_midterm/assets/33273567/e733f4fe-35b7-466f-b774-117f55743a27)
+
 trained LeNet-5 accuracy is almost the same with Reference LeNet-5 accuracy(98%)

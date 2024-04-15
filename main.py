@@ -1,4 +1,3 @@
-
 import dataset
 from model import LeNet5, CustomMLP
 # import some packages you need here
@@ -108,7 +107,8 @@ def main():
     epochs = 10
 
 
-    train_dataset = dataset.MNIST("/home/sungrae/khb/24_1/data/train")
+    #train_dataset = dataset.MNIST("/home/sungrae/khb/24_1/data/train")
+    train_dataset = dataset.MNIST_norm("/home/sungrae/khb/24_1/data/train")
     test_dataset = dataset.MNIST("/home/sungrae/khb/24_1/data/test")
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
@@ -117,11 +117,12 @@ def main():
 
     LeNet = LeNet5().to(device)
     MLP = CustomMLP().to(device)
-
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(LeNet.parameters(), lr=learning_rate, momentum=momentum)
+
     criterion1 = nn.CrossEntropyLoss()
     optimizer1 = optim.SGD(MLP.parameters(), lr=learning_rate, momentum=momentum)
+
 
     LeNet_train_losses, LeNet_test_losses, LeNet_train_accuracies, LeNet_test_accuracies = [], [], [], []
     MLP_train_losses, MLP_test_losses, MLP_train_accuracies, MLP_test_accuracies = [], [], [], []
@@ -134,8 +135,8 @@ def main():
         MLP_test_losses.append(MLP_tst_loss)
         MLP_test_accuracies.append(MLP_tst_acc)
         print(f'Epoch {epoch + 1}/{epochs}')
-        print(f'Train Loss: {MLP_trn_loss:.4f}, Train Accuracy: {MLP_trn_acc:.2f}%')
-        print(f'Test Loss: {MLP_tst_loss:.4f}, Test Accuracy: {MLP_tst_acc:.2f}%')
+        print(f'MLP Train Loss: {MLP_trn_loss:.4f}, MLP Train Accuracy: {MLP_trn_acc:.2f}%')
+        print(f'MLP Test Loss: {MLP_tst_loss:.4f}, MLP Test Accuracy: {MLP_tst_acc:.2f}%')
 
     for epoch in range(epochs):
         LeNet_trn_loss, LeNet_trn_acc = train(LeNet, train_loader, device, criterion, optimizer)

@@ -1,13 +1,12 @@
 # 24_01_midterm
 ## Param size comparison
 
-LeNet : 61,706
+LeNet : 59,470
 CustomMLP: 72,842
-Use torchsummary API or calculate by hand
 
-LeNet = 6 * 5 * 5 + 16 * 5 * 5 + 400 * 120 + 120 * 84 + 84 * 10
+LeNet = 6 * 5 * 5 + 16 * 5 * 5 + 400 * 120 + 120 * 84 + 84 * 10 = 59,470
 
-CustomMLP = 8 * 3 * 3 + 16 * 3 * 3 + 32 * 3 * 3 + 32 * 4 * 4 * 128 + 128 * 10
+CustomMLP = 8 * 3 * 3 + 16 * 3 * 3 + 32 * 3 * 3 + 32 * 4 * 4 * 128 + 128 * 10 = 67,320
 
 ## Model Accuracy comparison
 LeNet Train Loss: 0.0673, LeNet Train Accuracy: 97.94%

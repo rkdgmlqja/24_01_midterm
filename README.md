@@ -2,7 +2,7 @@
 ## Param size comparison
 
 LeNet : 59,470
-CustomMLP: 72,842
+CustomMLP: 67,320
 
 LeNet = 6 * 5 * 5 + 16 * 5 * 5 + 400 * 120 + 120 * 84 + 84 * 10 = 59,470
 
